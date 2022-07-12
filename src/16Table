@@ -1,0 +1,125 @@
+CREATE TABLE uzer(
+   inn INT PRIMARY KEY,
+    name VARCHAR(20),
+    age INTEGER
+);
+INSERT INTO uzer(inn, name, age) values (111,'MAKS',18);
+
+CREATE TABLE uzer1(
+    inn INT PRIMARY KEY,
+    name VARCHAR(33),
+    age INTEGER,
+    id_uzer INT REFERENCES uzer(inn)
+
+);
+INSERT INTO uzer1(inn, name, age) values (222,'Aziza',40);
+
+CREATE TABLE uzer2(
+                      inn INT PRIMARY KEY,
+                      name VARCHAR(33),
+                      age INTEGER
+
+
+);
+INSERT INTO uzer2(inn, name, age) values (212,'Klara',33);
+
+CREATE TABLE uzer3(
+    inn      INT PRIMARY KEY,
+    name     VARCHAR(33),
+    age      INTEGER,
+    id_uzer2 INT REFERENCES uzer (inn)
+
+);
+INSERT INTO uzer3(inn, name, age, id_uzer2) values (22,'Azamat',44);
+
+CREATE  TABLE uzer4(
+                       inn      INT PRIMARY KEY,
+                       name     VARCHAR(33),
+                       age      INTEGER
+
+);
+INSERT INTO uzer4(INN, NAME, AGE) VALUES (11,'Anya',33);
+
+CREATE TABLE uzer5(
+                      inn      INT PRIMARY KEY,
+                      name     VARCHAR(33),
+                      age      INTEGER,
+                      id_uzer4 INT REFERENCES uzer4 (inn)
+
+);
+INSERT INTO uzer5(inn, name, age, id_uzer4) values (234,'Azat',5,11);
+CREATE TABLE uzer6(
+                      inn      INT PRIMARY KEY,
+                      name     VARCHAR(33),
+                      age      INTEGER
+
+
+);
+INSERT INTO uzer6(INN, NAME, AGE) VALUES (12,'mamy',34);
+
+CREATE TABLE uzer7(
+                      inn      INT PRIMARY KEY,
+                      name     VARCHAR(33),
+                      age      INTEGER,
+                      id_uzer6 INT REFERENCES uzer6 (inn)
+
+);
+INSERT INTO uzer7(INN, NAME, AGE, ID_UZER6) values (12,'PAPA',44,12);
+CREATE TABLE uzer8(
+                      inn      INT PRIMARY KEY,
+                      name     VARCHAR(33),
+                      age      INTEGER
+);
+INSERT INTO uzer8(INN, NAME, AGE) values (14,'lolo',33);
+
+CREATE TABLE uzer9(
+                      inn      INT PRIMARY KEY,
+                      name     VARCHAR(33),
+                      age      INTEGER,
+                      id_uzer8 INT REFERENCES uzer8 (inn)
+
+);
+INSERT INTO uzer9(inn, name, age, id_uzer8) values (14,'buka',35,14);
+
+CREATE  TABLE uzer10(
+                        inn      INT PRIMARY KEY,
+                        name     VARCHAR(30),
+                        age      INTEGER
+);
+INSERT INTO uzer10(inn, name, age) values (2,'rakhat',45);
+ CREATE TABLE uzer11(
+                        inn      INT PRIMARY KEY,
+                        name     VARCHAR(33),
+                        age      INTEGER,
+                        id_uzer10 INT REFERENCES uzer10 (inn)
+
+ );
+INSERT INTO uzer11(inn, name, age, id_uzer10) values (2,'Nurik',33,2);
+CREATE TABLE uzer12(
+                       inn      INT PRIMARY KEY,
+                       name     VARCHAR(30),
+                       age      INTEGER
+
+);
+INSERT INTO uzer12(inn, name, age) values (1,'Aibek',22);
+CREATE TABLE uzer13(
+                       inn      INT PRIMARY KEY,
+                       name     VARCHAR(33),
+                       age      INTEGER,
+                       id_uzer12 INT REFERENCES uzer12 (inn)
+);
+INSERT INTO uzer13(INN, NAME, AGE, ID_UZER12) VALUES (1,'Alesa',33,1);
+CREATE TABLE uzer14(
+                       inn      INT PRIMARY KEY,
+                       name     VARCHAR(30),
+                       age      INTEGER
+
+);
+INSERT INTO uzer14(inn, name, age) values (22,'kukara',77);
+CREATE TABLE uzer15(
+                       inn      INT PRIMARY KEY,
+                       name     VARCHAR(33),
+                       age      INTEGER,
+                       id_uzer14 INT REFERENCES uzer14 (inn)
+);
+INSERT INTO uzer15(inn, name, age, id_uzer14) values (11,'ulytka',33,22);
